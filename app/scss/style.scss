@@ -1,11 +1,30 @@
-//settings
-@use 'settings/vars';
-@use 'settings/fonts';
-@use 'settings/reset';
-@use 'settings/global';
+@import 'settings/vars';
+@import 'settings/fonts';
+@import 'settings/reset';
+@import 'settings/global';
 
 //common blocks
-@use '../blocks/header/header';
-@use '../blocks/footer/footer';
+@import '../blocks/header/header';
+@import '../blocks/footer/footer';
+@import '../blocks/sidebar/sidebar';
 
 //main page blocks
+@import '../blocks/screen/screen';
+@import '../blocks/advantages/advantages';
+@import '../blocks/hits/hits';
+@import '../blocks/reviews/reviews';
+
+//catalog page blocks
+@import '../blocks/catalog/catalog';
+
+//contact page blocks
+@import '../blocks/contact/contact';
+
+//policy and terms of use pages blocks
+@import '../blocks/additional/additional';
+
+//thanks page blocks
+@import '../blocks/thanks/thanks';
+
+//about page blocks
+@import '../blocks/about/about';

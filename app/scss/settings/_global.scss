@@ -1,20 +1,26 @@
 html,
 body {
-    overflow-x: hidden;
     height: 100%;
-    background-color: #000;
-    color: #fff;
-}
-
-.box {
-    height: 100vh;
-    width: 100vw;
+    background-color: $sectionBgColor;
+    color: #000;
 }
 
 .wrapper {
+    position: relative;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     min-height: 100%;
+}
+
+.thanksPageWrapper {
+    padding-top: 0;
+
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .main {
@@ -26,6 +32,92 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 68.8%;
     margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 3px solid rgb(242, 240, 254);
+    border-radius: 50px;
+    @include adaptive-padding(20,10);
+    background-color: $mainColor;
+    color: rgb(246, 250, 253);
+    font-family: MontserratBold;
+    @include adaptive-font(16, 10);
+    transition: all .3s;
+    border: 1px solid transparent;
+    text-align: center;
+
+    &:hover {
+        background-color: transparent;
+        color: $mainColor;
+        border: 1px solid $mainColor;
+    }
+}
+
+.title-green {
+    color: $mainColor;
+}
+
+.logo {
+    font-family: MontserratBold;
+    font-size: 25px;
+    @include adaptive-font(40, 20);
+    color: $mainColor;
+}
+
+.section{
+    padding: 100px 0;
+    &-title {
+        @include adaptive-font(30, 15);
+        font-family: MontserratSemiBold;
+        @include adaptive-marginBottom(20,10);
+        text-align: center;
+    }
+    
+    &-text {
+        @include adaptive-font(16, 10);
+        font-family: MontserratRegular;
+        width: 50%;
+        text-align: center;
+        margin: 0 auto 50px auto;
+    }
+}
+
+
+.block-title {
+    font-family: MontserratBold;
+    @include adaptive-font(24, 15);
+}
+
+.block-text {
+    font-family: MontserratRegular;
+    @include adaptive-font(18, 12);
+}
+
+@media (max-width: 1100px) {
+    .container{
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+    .section{
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn{
+        width: 100%;
+    }
+
+    .section{
+        &-text{
+            width: 100%;
+            @include adaptive-marginBottom(30,15);
+        }
+    }
 }

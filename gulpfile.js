@@ -18,7 +18,7 @@ function html() {
 
 function styles() {
   return src("app/scss/style.scss")
-    .pipe(scss({ style: "compressed" }))
+    .pipe(scss({ style: "compressed" }).on('error', scss.logError))
     .pipe(concat("style.min.css"))
     .pipe(
       autoprefixer({
