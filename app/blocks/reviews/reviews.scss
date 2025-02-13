@@ -1,18 +1,10 @@
 .reviews {
     background-color: #fff;
-    padding: 100px 0;
 
     &__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-
-    &__list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
     }
 
     &__item {
@@ -24,12 +16,12 @@
         &-person {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            @include adaptive-marginBottom(20,10);
         }
 
         &-photo {
-            width: 70px;
-            height: 70px;
+            @include adaptive-width(70,40);
+            @include adaptive-height(70,40);
             border-radius: 50%;
             margin-right: 20px;
         }
@@ -42,7 +34,7 @@
         &-title {
             font-family: MontserratSemiBold;
             @include adaptive-font(16, 10);
-            margin-bottom: 20px;
+            @include adaptive-marginBottom(20,10);
         }
 
         &-text {

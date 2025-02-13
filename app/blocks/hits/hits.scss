@@ -1,10 +1,4 @@
 .hits {
-    &__list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        @include adaptive-gridGap(20,10);
-    }
-
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -55,24 +49,6 @@
             font-family: MontserratRegular;
             @include adaptive-font(16, 10);
             text-align: center;
-        }
-    }
-}
-
-
-@media (max-width: 900px) {
-    .hits{
-        &__list{
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
-
-@media (max-width: 400px) {
-    .hits{
-        &__list{
-            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
