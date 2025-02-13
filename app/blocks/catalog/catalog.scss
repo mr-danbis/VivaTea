@@ -8,10 +8,10 @@
 
         &-img {
             width: 100%;
-            @include adaptive-height(200,100);
+            @include adaptive-height(200, 100);
             object-fit: cover;
             border-radius: 15px;
-            @include adaptive-marginBottom(20,10);
+            @include adaptive-marginBottom(20, 10);
         }
 
         &-category {
@@ -39,6 +39,7 @@
 
         &-composition {
             margin-bottom: 10px;
+
             &_title {
                 font-family: MontserratSemiBold;
                 @include adaptive-font(16, 10);
@@ -51,15 +52,29 @@
             }
         }
 
-        &-weight{
+        &-weight {
             font-family: MontserratRegular;
             @include adaptive-font(16, 10);
             margin-bottom: 10px;
         }
 
-        &-price{
+        &-price {
             font-family: MontserratBold;
             @include adaptive-font(24, 18);
+            margin-bottom: 10px;
+        }
+
+        &-btn {
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid $mainColor;
+            color: $mainColor;
+
+            &:hover {
+                background-color: $mainColor;
+                border: 1px solid $mainColor;
+                color: #fff;
+            }
         }
 
     }
