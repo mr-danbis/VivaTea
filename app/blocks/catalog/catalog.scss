@@ -38,6 +38,7 @@
         }
 
         &-composition {
+            margin-bottom: 10px;
             &_title {
                 font-family: MontserratSemiBold;
                 @include adaptive-font(16, 10);
@@ -48,6 +49,17 @@
                 font-family: MontserratRegular;
                 @include adaptive-font(16, 10);
             }
+        }
+
+        &-weight{
+            font-family: MontserratRegular;
+            @include adaptive-font(16, 10);
+            margin-bottom: 10px;
+        }
+
+        &-price{
+            font-family: MontserratBold;
+            @include adaptive-font(24, 18);
         }
 
     }
